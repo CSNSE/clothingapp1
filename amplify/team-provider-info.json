@@ -14,6 +14,12 @@
     "categories": {
       "auth": {
         "clothingapp1260a7332": {}
+      },
+      "api": {
+        "clothingapp1": {}
+      },
+      "storage": {
+        "imagestorage": {}
       }
     }
   }
