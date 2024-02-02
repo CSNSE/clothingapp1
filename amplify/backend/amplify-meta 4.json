@@ -1,0 +1,105 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplify840d25c1faa54-staging-170641-authRole",
+      "UnauthRoleArn": "arn:aws:iam::589744011859:role/amplify-amplify840d25c1faa54-staging-170641-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::589744011859:role/amplify-amplify840d25c1faa54-staging-170641-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-amplify840d25c1faa54-staging-170641-deployment",
+      "UnauthRoleName": "amplify-amplify840d25c1faa54-staging-170641-unauthRole",
+      "StackName": "amplify-amplify840d25c1faa54-staging-170641",
+      "StackId": "arn:aws:cloudformation:us-east-1:589744011859:stack/amplify-amplify840d25c1faa54-staging-170641/4516ce50-c124-11ee-a308-0ee27b3dad9d",
+      "AmplifyAppId": "d1xc2l5jt8ncxc"
+    }
+  },
+  "api": {
+    "clothingapp1": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ],
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
+            }
+          }
+        },
+        "GraphQLAPIIdOutput": "ecn45bxwgfaqfcwkv45s3jy4ka",
+        "GraphQLAPIEndpointOutput": "https://is2pbwapy5dxllw63vnymjcx7q.appsync-api.us-east-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-3isaw2kgw5gytiyhopvxih4qjy"
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync",
+      "lastPushTimeStamp": "2024-02-02T14:11:31.509Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify840d25c1faa54-staging-170641-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiclothingapp1"
+      },
+      "lastPushDirHash": "L73VxWODMk09e4LmbadFrITEhzE="
+    }
+  },
+  "auth": {
+    "clothingapp1260a7332": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "output": {
+        "UserPoolId": "us-east-1_0VsNAeUdQ",
+        "AppClientIDWeb": "1e0kvnvtcc7a77m59c0vgoel6o",
+        "AppClientID": "3f01s40duju96ajvm59on4rtc",
+        "IdentityPoolId": "us-east-1:03eef355-d33e-40b6-a488-1a7f16a38e22",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:589744011859:userpool/us-east-1_0VsNAeUdQ",
+        "IdentityPoolName": "clothingapp1260a7332_identitypool_260a7332__staging",
+        "UserPoolName": "clothingapp1260a7332_userpool_260a7332"
+      },
+      "lastPushTimeStamp": "2024-02-02T14:11:31.512Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify840d25c1faa54-staging-170641-deployment/amplify-cfn-templates/auth/clothingapp1260a7332-cloudformation-template.json",
+        "logicalId": "authclothingapp1260a7332"
+      }
+    }
+  },
+  "storage": {
+    "imagestorage": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3",
+      "output": {
+        "BucketName": "clothingapp1bucket170641-staging",
+        "Region": "us-east-1"
+      },
+      "lastPushTimeStamp": "2024-02-02T14:11:32.897Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify840d25c1faa54-staging-170641-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "logicalId": "storageimagestorage"
+      }
+    }
+  }
+}
