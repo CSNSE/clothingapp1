@@ -31,15 +31,20 @@ const App = ({ signOut }) => {
   async function fetchNotes() {
     const apiData = await client.graphql({ query: listNotes });
     const notesFromAPI = apiData.data.listNotes.items;
-    await Promise.all(
-      notesFromAPI.map(async (note) => {
-        if (note.image) {
-          const url = await getUrl({ key: note.name });
-          note.image = url.url;  
+    
+    await Promise.all(notesFromAPI.map(async note => {
+      if (note.image) {
+        try {
+          const url = await getUrl({ key: note.image });
+          note.imageUrl = url.url;
+        } catch (error) {
+          console.error('Error retrieving image URL:', error);
+          note.imageUrl = '';
         }
-        return note;
-      })
-    );
+      }
+      return note;
+    }));
+
     setNotes(notesFromAPI);
   }
 
@@ -47,15 +52,20 @@ const App = ({ signOut }) => {
     event.preventDefault();
     const form = new FormData(event.target);
     const image = form.get("image");
+    const imageName = image ? `${Date.now()}-${image.name}` : '';
     const data = {
       name: form.get("name"),
       description: form.get("description"),
-      image: image.name,
+      image: imageName,
     };
-    if (!!data.image) await uploadData({
-      key: data.name,
-      data: image
-    });
+
+    if (image && image.size) {
+      await uploadData({
+        key: imageName,
+        data: image
+      });
+    }
+
     await client.graphql({
       query: createNoteMutation,
       variables: { input: data },
@@ -64,10 +74,14 @@ const App = ({ signOut }) => {
     event.target.reset();
   }
 
-  async function deleteNote({ id, name }) {
-    const newNotes = notes.filter((note) => note.id !== id);
+  async function deleteNote({ id, image }) {
+    const newNotes = notes.filter(note => note.id !== id);
     setNotes(newNotes);
-    await remove({ key: name });
+
+    if (image) {
+      await remove({ key: image });
+    }
+
     await client.graphql({
       query: deleteNoteMutation,
       variables: { input: { id } },
@@ -106,9 +120,9 @@ const App = ({ signOut }) => {
           </Button>
         </Flex>
       </View>
-      <Heading level={2}>Current Notes</Heading>
+      <Heading level={2}>All Notes</Heading>
       <View margin="3rem 0">
-        {notes.map((note) => (
+        {notes.map(note => (
           <Flex
             key={note.id || note.name}
             direction="row"
@@ -119,10 +133,10 @@ const App = ({ signOut }) => {
               {note.name}
             </Text>
             <Text as="span">{note.description}</Text>
-            {note.image && (
+            {note.imageUrl && (
               <Image
-                src={note.image}
-                alt={`visual aid for ${notes.name}`}
+                src={note.imageUrl}
+                alt={`Image for ${note.name}`}
                 style={{ width: 400 }}
               />
             )}
