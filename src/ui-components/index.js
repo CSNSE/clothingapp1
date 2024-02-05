@@ -36,6 +36,8 @@ export { default as ProfileCard } from "./ProfileCard";
 export { default as ReviewCard } from "./ReviewCard";
 export { default as ShirtCard1 } from "./ShirtCard1";
 export { default as ShirtCard1Collection } from "./ShirtCard1Collection";
+export { default as ShirtCard2 } from "./ShirtCard2";
+export { default as ShirtCard2Collection } from "./ShirtCard2Collection";
 export { default as ShirtCreateForm } from "./ShirtCreateForm";
 export { default as ShirtUpdateForm } from "./ShirtUpdateForm";
 export { default as SideBar } from "./SideBar";
