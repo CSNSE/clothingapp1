@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { NoteCreateForm, ShirtCard1Collection, ShirtCreateForm } from './ui-components';
+import { withAuthenticator } from '@aws-amplify/ui-react';
 import "./App.css";
-// import { components } from "@aws-amplify/ui-react";
 
 const App = () => {
   return (
@@ -17,4 +17,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default withAuthenticator(App);
