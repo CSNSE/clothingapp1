@@ -12,14 +12,14 @@
       "AmplifyAppId": "d1xc2l5jt8ncxc"
     },
     "categories": {
-      "auth": {
-        "clothingapp1260a7332": {}
-      },
       "api": {
         "clothingapp1": {}
       },
       "storage": {
         "imagestorage": {}
+      },
+      "auth": {
+        "clothingapp14c62e490": {}
       }
     }
   }

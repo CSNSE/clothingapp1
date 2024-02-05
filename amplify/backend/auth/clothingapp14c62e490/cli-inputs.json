@@ -1,10 +1,10 @@
 {
   "version": "1",
   "cognitoConfig": {
-    "identityPoolName": "clothingapp1260a7332_identitypool_260a7332",
+    "identityPoolName": "clothingapp14c62e490_identitypool_4c62e490",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "clothi260a7332",
-    "userPoolName": "clothingapp1260a7332_userpool_260a7332",
+    "resourceNameTruncated": "clothi4c62e490",
+    "userPoolName": "clothingapp14c62e490_userpool_4c62e490",
     "autoVerifiedAttributes": [
       "email"
     ],
@@ -31,10 +31,10 @@
     "userpoolClientReadAttributes": [
       "email"
     ],
-    "userpoolClientLambdaRole": "clothi260a7332_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "clothi4c62e490_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "260a7332",
-    "resourceName": "clothingapp1260a7332",
+    "sharedId": "4c62e490",
+    "resourceName": "clothingapp14c62e490",
     "authSelections": "identityPoolAndUserPool",
     "useDefault": "default",
     "usernameAttributes": [
