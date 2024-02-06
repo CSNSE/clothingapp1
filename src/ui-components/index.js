@@ -25,6 +25,7 @@ export { default as MarketingFooter } from "./MarketingFooter";
 export { default as MarketingFooterBrand } from "./MarketingFooterBrand";
 export { default as MarketingPricing } from "./MarketingPricing";
 export { default as MyIcon } from "./MyIcon";
+export { default as NavBar1 } from "./NavBar1";
 export { default as NavBarHeader } from "./NavBarHeader";
 export { default as NavBarHeader2 } from "./NavBarHeader2";
 export { default as NavBarSide } from "./NavBarSide";
