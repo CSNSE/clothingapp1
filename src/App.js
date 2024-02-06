@@ -7,13 +7,14 @@ import "./App.css";
 const App = () => {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<ShirtCard2Collection />} />
-        <Route path="/other" element={<NoteCreateForm />} />
-        <Route path="/shirt" element={<ShirtCreateForm />} />
-        <Route path="/shirtcard1collection" element={<ShirtCard1Collection />} />
-        {/* Add other routes as needed */}
-      </Routes>
+      <div className="ui-component-container">
+        <Routes>
+          <Route path="/" element={<ShirtCard2Collection />} />
+          <Route path="/other" element={<NoteCreateForm />} />
+          <Route path="/shirt" element={<ShirtCreateForm />} />
+          <Route path="/shirtcard1collection" element={<ShirtCard1Collection />} />
+        </Routes>
+      </div>
     </Router>
   );
 };

@@ -2,6 +2,25 @@
   text-align: center;
 }
 
+/* Responsive container for UI components */
+.ui-component-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Add padding for better spacing */
+  max-width: 600px; /* Maximum width for larger screens */
+  margin: 0 auto; /* Center the container */
+}
+
+/* Ensure components take full width on smaller screens */
+@media screen and (max-width: 600px) {
+  .ui-component-container {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
