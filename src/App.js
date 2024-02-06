@@ -8,10 +8,10 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<ShirtCard1Collection />} />
+        <Route path="/" element={<ShirtCard2Collection />} />
         <Route path="/other" element={<NoteCreateForm />} />
         <Route path="/shirt" element={<ShirtCreateForm />} />
-        <Route path="/shirtcard2collection" element={<ShirtCard2Collection />} />
+        <Route path="/shirtcard1collection" element={<ShirtCard1Collection />} />
         {/* Add other routes as needed */}
       </Routes>
     </Router>

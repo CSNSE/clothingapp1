@@ -8,7 +8,7 @@
 import * as React from "react";
 import { generateClient } from "aws-amplify/api";
 import { deleteShirt } from "../graphql/mutations";
-import { getOverrideProps } from "./utils";
+import { getOverrideProps, useNavigateAction } from "./utils";
 import { Flex, Image, Text, View } from "@aws-amplify/ui-react";
 import MyIcon from "./MyIcon";
 const client = generateClient();
@@ -24,6 +24,7 @@ export default function ShirtCard2(props) {
       },
     });
   };
+  const deleteOnMouseUp = useNavigateAction({ type: "url", url: "/" });
   return (
     <Flex
       gap="4px"
@@ -77,6 +78,9 @@ export default function ShirtCard2(props) {
           padding="0px 0px 0px 0px"
           onClick={() => {
             deleteOnClick();
+          }}
+          onMouseUp={() => {
+            deleteOnMouseUp();
           }}
           {...getOverrideProps(overrides, "delete")}
         >
