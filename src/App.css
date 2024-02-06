@@ -1,3 +1,4 @@
+/* Common styles for all screen sizes */
 .App {
   text-align: center;
   height: 100vh; /* Full viewport height */
@@ -7,7 +8,6 @@
   align-items: center; /* Horizontally center */
 }
 
-/* Responsive container for UI components */
 .ui-component-container {
   display: flex;
   flex-direction: column;
@@ -18,13 +18,6 @@
   width: 100%; /* Ensure full width on all screens */
   box-sizing: border-box; /* Include padding and border in the width */
   margin: 0 auto; /* Center the container horizontally */
-}
-
-/* Ensure components take full width on smaller screens */
-@media screen and (max-width: 600px) {
-  .ui-component-container {
-    max-width: 100%;
-  }
 }
 
 .App-logo {
@@ -38,20 +31,23 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Styles for smaller screens (e.g., iPhones) */
+@media screen and (max-width: 600px) {
+  /* Adjust your styles here for smaller screens */
+  .ui-component-container {
+    /* Example: Reduce padding for smaller screens */
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .App-logo {
+    /* Example: Reduce logo size for smaller screens */
+    height: 30vmin;
   }
+  
+  .App-header {
+    /* Example: Change background color for smaller screens */
+    background-color: #61dafb;
+  }
+  
+  /* You can add more styles specific to smaller screens here */
 }
