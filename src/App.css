@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center */
+  align-items: center; /* Horizontally center */
 }
 
 /* Responsive container for UI components */
@@ -10,13 +15,14 @@
   justify-content: center;
   padding: 20px; /* Add padding for better spacing */
   max-width: 600px; /* Maximum width for larger screens */
-  margin: 0 auto; /* Center the container */
+  width: 100%; /* Ensure full width on all screens */
+  box-sizing: border-box; /* Include padding and border in the width */
+  margin: 0 auto; /* Center the container horizontally */
 }
 
 /* Ensure components take full width on smaller screens */
 @media screen and (max-width: 600px) {
   .ui-component-container {
-    width: 100%;
     max-width: 100%;
   }
 }
@@ -34,12 +40,6 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
