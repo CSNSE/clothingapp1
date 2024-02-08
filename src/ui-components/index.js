@@ -29,6 +29,7 @@ export { default as NavBar1 } from "./NavBar1";
 export { default as NavBarHeader } from "./NavBarHeader";
 export { default as NavBarHeader2 } from "./NavBarHeader2";
 export { default as NavBarSide } from "./NavBarSide";
+export { default as NewShirt1 } from "./NewShirt1";
 export { default as NoteCreateForm } from "./NoteCreateForm";
 export { default as NoteUpdateForm } from "./NoteUpdateForm";
 export { default as ProductCard } from "./ProductCard";
