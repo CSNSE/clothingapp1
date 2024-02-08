@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { NavBar1, NewShirt1, ShirtCard1Collection, ShirtCard2Collection, ShirtCreateForm } from './ui-components';
+import { InstagramNavigationBottom, NavBar1, NewShirt1, ShirtCard1Collection, ShirtCard2Collection, ShirtCreateForm } from './ui-components';
 import { withAuthenticator } from '@aws-amplify/ui-react';
 import "./App.css";
 
@@ -10,7 +10,7 @@ const App = () => {
       <div className="App"> {/* Apply the "App" class to the main container */}
         <div className="ui-component-container">
           <Routes>
-            <Route path="/" element={<div><NavBar1/><ShirtCard2Collection /></div>} />
+            <Route path="/" element={<div><ShirtCard2Collection /><InstagramNavigationBottom/></div>} />
             <Route path="/shirt" element={<div><NavBar1/><NewShirt1 /></div>} />
             <Route path="/shirtcard1collection" element={<ShirtCard1Collection />} />
           </Routes>
